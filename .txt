@@ -1,0 +1,33 @@
+# 1 - Liste o número do funcionário, nome completo e o nome do departamento em que trabalha.
+Select e.emp_no, e.first_name, e.last_name, d.dept_name
+from employees e 
+join dept_emp de ON e.emp_no = de.emp_no 
+join departments d ON de.dept_no = d.dept_no;
+
+# 2 - Exiba o nome do gerente, o número do funcionário e o nome do departamento que ele gerencia.
+Select e.emp_no, e.first_name, e.last_name, d.dept_name
+from employees e 
+join dept_manager m ON e.emp_no = m.emp_no
+join departments d ON d.dept_no = m.dept_no;
+
+# 3 - Liste todos os funcionários e mostre o nome do departamento, mesmo que o funcionário não esteja alocado em nenhum departamento.
+select e.emp_no, concat(e.first_name, ' ' , e.last_name) as nome_completo, d.dept_name
+from employees e 
+left join dept_emp de ON de.emp_no = e.emp_no
+left join departments d ON d.dept_no = de.emp_no;
+# 4 - Liste todos os departamentos e os nomes dos funcionários alocados, incluindo departamentos sem nenhum funcionário.
+select d.dept_no, concat(e.first_name, ' ' , e.last_name) as nome_completo, e.emp_no
+from departments d 
+left join 
+left join 
+# 5 - Liste o nome completo do funcionário, o título e o salário atual
+
+# 6 - Exiba todos os funcionários e seus salários, mas garanta que funcionários sem salário registrado também apareçam na lista.
+
+# 7 - Mostre todos os departamentos pelos quais um funcionário específico (ex: emp_no = 10001) já passou.
+
+# 8 - Liste todos os departamentos, mostrando o gerente responsável (se houver).
+
+# 9 - Liste os títulos de todos os funcionários junto com o nome do departamento onde trabalham.
+
+# 10 - Liste todos os funcionários que nunca atuaram como gerentes.
